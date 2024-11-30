@@ -21,6 +21,7 @@ export const CartSlice = createSlice({
       console.log(action.payload);
       
       state.items = state.items.filter(item => item.name !== action.payload);
+      state.totalQuantity--;
 
     },  
     updateQuantity: (state, action) => {
